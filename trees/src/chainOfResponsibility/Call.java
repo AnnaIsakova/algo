@@ -3,12 +3,17 @@ package chainOfResponsibility;
 public class Call {
 
     String from;
-    Type type;
     boolean answered;
 
-    enum Type {
-        REGULAR,
-        BUSSINESS,
-        CONFIDENTIAL
+    public Call(String from) {
+        this.from = from;
+    }
+
+    @Override
+    public String toString() {
+        return "Call{" +
+                "from='" + from + '\'' +
+                ", answered=" + answered +
+                '}';
     }
 }
